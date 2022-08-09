@@ -1,0 +1,56 @@
+﻿@model QLPHANMEM.Models.HoSo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn chắc chắn xóa thông tin này?</h3>
+<div>
+    <h4>Hồ Sơ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENHS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENHS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayLapHS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayLapHS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLHS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLHS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien.HOTEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.HOTEN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Thông tin hồ sơ")
+        </div>
+    }
+</div>

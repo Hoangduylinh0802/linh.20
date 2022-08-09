@@ -1,0 +1,51 @@
+﻿@model IEnumerable<QLPHANMEM.Models.ViPham>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Thông Tin Vi Phạm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENVIPHAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLXEVIPHAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOTIENPHAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoSo.MSNV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENVIPHAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLXEVIPHAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOTIENPHAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoSo.MSNV)
+        </td>
+        <td>
+            @Html.ActionLink("Thêm ", "Edit", new { id=item.MSVIPHAM }) |
+            @Html.ActionLink("Sữa", "Details", new { id=item.MSVIPHAM }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MSVIPHAM })
+        </td>
+    </tr>
+}
+
+</table>

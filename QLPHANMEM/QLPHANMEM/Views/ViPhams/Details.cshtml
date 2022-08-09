@@ -1,0 +1,50 @@
+﻿@model QLPHANMEM.Models.ViPham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Sửa</h2>
+
+<div>
+    <h4>ViPham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENVIPHAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENVIPHAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLXEVIPHAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLXEVIPHAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOTIENPHAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOTIENPHAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoSo.MSNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoSo.MSNV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Thoát", "Edit", new { id = Model.MSVIPHAM }) |
+    @Html.ActionLink("Quay Lại", "Thông tin vi phạm")
+</p>

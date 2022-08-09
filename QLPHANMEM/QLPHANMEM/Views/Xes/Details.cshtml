@@ -1,0 +1,58 @@
+﻿@model QLPHANMEM.Models.Xe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Sửa</h2>
+
+<div>
+    <h4>Xe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENXE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENXE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENHANGXE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENHANGXE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLXE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLXE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLĐCHUAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLĐCHUAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien.HOTEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.HOTEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Thoát", "Edit", new { id = Model.MSXE }) |
+    @Html.ActionLink("Quay Lại", "Thông tin xe")
+</p>
